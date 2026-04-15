@@ -33,7 +33,7 @@ export function useTransactions() {
     .filter(t => t.type === 'expense')
     .reduce((sum, t) => sum + t.amount, 0)
 
-  const balance = totalIncome - totalExpenses
+  const balance = totalIncome + totalExpenses
 
   return { transactions, addTransaction, deleteTransaction, totalIncome, totalExpenses, balance }
 }
