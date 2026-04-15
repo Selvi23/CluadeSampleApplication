@@ -17,7 +17,7 @@ export function useTransactions() {
   }, [transactions])
 
   function addTransaction(transaction) {
-    const entry = { ...transaction, id: crypto.randomUUID() }
+    const entry = { ...transaction, type: 'income', id: crypto.randomUUID() }
     setTransactions(prev => [entry, ...prev])
   }
 
